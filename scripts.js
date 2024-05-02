@@ -24,18 +24,3 @@ function displayCountdown(count, callback) {
 displayCountdown(10, function() {
     console.log("Independence Day message displayed!");
 });
-
-function createPaperPiece() {
-    var paperPiece = document.createElement("div");
-    paperPiece.className = "paper-piece";
-    paperPiece.style.left = Math.random() * window.innerWidth + "px";
-    paperContainer.appendChild(paperPiece);
-
-    // Remove paper piece after animation ends
-    paperPiece.addEventListener("animationend", function() {
-        paperContainer.removeChild(paperPiece);
-    });
-}
-
-// Create paper pieces at intervals
-setInterval(createPaperPiece, 500);
